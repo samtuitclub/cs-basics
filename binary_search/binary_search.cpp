@@ -2,13 +2,13 @@
 
 using namespace std;
 
-int binary_search(int array[], int low, int high, int value) {
-    if (low > high) {
+int binary_search(int array[], int low, int hight, int value) {
+    if (low > hight) {
         return -1;
     }
-    int middle = (low + high) / 2;
+    int middle = (low + hight) / 2;
     if(array[middle] < value) {
-        return binary_search(array, middle + 1, high, value);
+        return binary_search(array, middle + 1, hight, value);
     } else if (array[middle] > value) {
         return binary_search(array, low, middle - 1, value);
     } else if (array[middle] == value) {
